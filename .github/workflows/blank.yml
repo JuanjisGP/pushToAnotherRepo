@@ -20,6 +20,6 @@ jobs:
         with:
           source-directory: '.'
           destination-github-username: 'JuanjisGP'
-          destination-repository-name: 'pushFromAnotherRepo'
+          destination-repository-name: 'pushToAnotherRepo'
           user-email: jjc.gp12@gmail.com
-          target-branch: main
+          target-branch: develop
