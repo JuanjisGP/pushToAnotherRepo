@@ -9,10 +9,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: pandoc/latex    # "ubuntu" is a more generic container check this later
-                               # using "pandoc/latex" because of dependencies
-                               # used in the specific "build.sh"
     steps:
+      - uses: actions/checkout@v2
       - name: Pushes to another repository
         uses: cpina/github-action-push-to-another-repository@main
         env:
