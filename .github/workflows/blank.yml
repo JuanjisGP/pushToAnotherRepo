@@ -22,4 +22,5 @@ jobs:
           destination-github-username: 'JuanjisGP'
           destination-repository-name: 'pushFromAnotherRepo'
           user-email: jjc.gp12@gmail.com
+          commit-message: "probando a actualizar desde otro repo"
           target-branch: develop
