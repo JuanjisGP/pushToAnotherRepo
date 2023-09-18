@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: pandoc/latex    # "ubuntu" is a more generic container check this later
+    container: ubuntu    # "ubuntu" is a more generic container check this later
                                # using "pandoc/latex" because of dependencies
                                # used in the specific "build.sh"
     steps:
