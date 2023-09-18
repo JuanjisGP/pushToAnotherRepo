@@ -21,3 +21,5 @@ jobs:
           source-directory: '.'
           destination-github-username: 'JuanjisGP'
           destination-repository-name: 'pushFromAnotherRepo'
+          user-email: jjc.gp12@gmail.com
+          target-branch: main
