@@ -2,24 +2,24 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ develop ]
   pull_request:
-    branches: [ main ]
+    branches: [ develop ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: pandoc/latex    # "ubuntu" is a more generic container check this later
-                               # using "pandoc/latex" because of dependencies
-                               # used in the specific "build.sh"
+    container: ubuntu    
     steps:
+      - uses: actions/checkout@v4
       - name: Pushes to another repository
         uses: cpina/github-action-push-to-another-repository@main
         env:
           SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
         with:
           source-directory: '.'
-          destination-github-username: 'JuanjisGP'
-          destination-repository-name: 'pushFromAnotherRepo'
+          destination-github-username: 'Jo3l'
+          destination-repository-name: 'cv-web-builder'
           user-email: jjc.gp12@gmail.com
-          target-branch: main
+          commit-message: "probando a actualizar desde otro repo"
+          target-branch: expirationDate
