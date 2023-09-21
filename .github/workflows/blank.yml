@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Copy output_temp/ to output/ using rsync (to exclude main.epub in this example)
-        run:  apk add rsync && rsync -arv --exclude=".gihub/" / output/
+        run:  apk add rsync && rsync -arv --exclude=".gihub/" src/ output/
       - name: Pushes to another repository
         uses: cpina/github-action-push-to-another-repository@main
         env:
