@@ -12,6 +12,8 @@ jobs:
     container: ubuntu    
     steps:
       - uses: actions/checkout@v4
+      - name: Copy output_temp/ to output/ using rsync (to exclude main.epub in this example)
+        run:  apk add rsync && rsync -arv --exclude=".gihub" output_temp/ output/
       - name: Pushes to another repository
         uses: cpina/github-action-push-to-another-repository@main
         env:
@@ -22,4 +24,4 @@ jobs:
           destination-repository-name: 'cv-web-builder'
           user-email: jjc.gp12@gmail.com
           commit-message: "probando a actualizar desde otro repo"
-          target-branch: expirationDate
+          target-branch: develop
